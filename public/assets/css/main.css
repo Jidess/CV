@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -18,11 +19,26 @@ h3 {
 h4 {
     font-family: 'Orbitron', sans-serif;
 }
+
 h5 {
     font-family: 'Orbitron', sans-serif;
 }
 
-li img{
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+li {
+    list-style: none;
+    padding: none;
+}
+
+li img {
     width: 16px;
     height: 16px;
 }
@@ -63,6 +79,7 @@ li img{
     font-family: 'Orbitron', sans-serif;
     transition: all 0.1s ease-in-out;
 }
+
 #btnList button:disabled {
     border-right: solid 5px rgb(69, 57, 57);
     background-color: rgba(255, 255, 0, 0.498);
@@ -71,12 +88,13 @@ li img{
 #btnList button:hover {
     border-right: solid 5px rgb(182, 19, 19);
     transform: translateY(-5px);
-    border-bottom:  solid 5px rgb(182, 19, 19);
+    border-bottom: solid 5px rgb(182, 19, 19);
 }
+
 #btnList button:disabled:hover {
     border-right: solid 5px rgb(69, 57, 57);
     transform: translateY(0px);
-    border-bottom:  none;
+    border-bottom: none;
 }
 
 
@@ -85,18 +103,32 @@ li img{
     display: none;
     flex-direction: column;
     width: 100vw;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
 }
 
 
 header {
     height: 80vh;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.89);
     color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5vh;
 }
 
 header h3 {
-    margin-top: 30vh;
+
     text-align: center;
 }
 
@@ -105,34 +137,35 @@ nav {
     justify-content: space-between;
     background-color: yellow;
     color: #000;
-    clip-path: polygon(
-  0px 0px,
-  0px 0px,
-  0px 0px,
-  0 0px, 
-  100% 0, 
-  100% 0px,
-  calc(100% - 15px) calc(100% - 10px),
-  calc(80% - 10px) calc(100% - 10px),
-  calc(80% - 15px) 100%,
-  80px calc(100% - 0px),
-  65px calc(100% - 15px),
-  0% calc(100% - 15px));
-  padding: 1rem;
+    clip-path: polygon(0px 0px,
+            0px 0px,
+            0px 0px,
+            0 0px,
+            100% 0,
+            100% 0px,
+            calc(100% - 15px) calc(100% - 10px),
+            calc(80% - 10px) calc(100% - 10px),
+            calc(80% - 15px) 100%,
+            80px calc(100% - 0px),
+            65px calc(100% - 15px),
+            0% calc(100% - 15px));
+    padding: 1rem;
+}
+nav a img{
+    width: 50px;
+    height: 50px;
 }
 
 
 main {
-    background-image: url('../img/background.png');
-    background-size: cover ; 
-    background-attachment:fixed;
-    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8rem;
 }
-#infoCard{
+
+#infoCard {
     display: flex;
     gap: 2rem;
     margin-top: 4rem;
@@ -140,33 +173,44 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 #diplomes {
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
-    background-color:yellow;
-    
-    
+    background-color: yellow;
+
+
 }
+
 #parcourPro {
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
-    background-color:yellow;
-    
+    background-color: yellow;
+
 }
-.blueCard{
+
+#parcourPro ol {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.blueCard {
     transition: all 0.1s ease-in-out;
     border-right: solid 5px rgb(19, 30, 182);
     width: 300px;
     height: 475px;
 }
-.blueCard:hover{
+
+.blueCard:hover {
     border-right: solid 5px rgb(182, 19, 19);
     transform: translateY(-5px);
-    border-bottom:  solid 5px rgb(182, 19, 19);
+    border-bottom: solid 5px rgb(182, 19, 19);
 }
 
 #portfolio {
     clip-path: polygon(67% 0, 100% 2%, 100% 100%, 15% 100%, 0 100%, 0 0);
-width: 100vw;
-    background-color: #000;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.925);
     color: black;
     text-align: center;
 }
@@ -179,24 +223,25 @@ width: 100vw;
     content: "";
     display: block;
     position: relative;
-    
-    height: 24px;
-    width: 100vw;
-    background-color: yellow;
-    clip-path: inherit;
-}
-#portfolio::after {
-    content: "";
-    display: block;
-    position: relative;
-    
+
     height: 24px;
     width: 100vw;
     background-color: yellow;
     clip-path: inherit;
 }
 
-#technoList{
+#portfolio::after {
+    content: "";
+    display: block;
+    position: relative;
+
+    height: 24px;
+    width: 100vw;
+    background-color: yellow;
+    clip-path: inherit;
+}
+
+#technoList {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,20 +251,49 @@ width: 100vw;
     justify-content: center;
     align-items: center;
 }
-#technoList div{
+
+#technoList div {
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
-    background-color:yellow;
+    background-color: yellow;
     padding: 2rem;
     border-right: solid 5px rgb(182, 19, 19);
     transition: all 0.1s ease-in-out;
 }
 
-#technoList div:hover{
+#technoList div:hover {
     border-right: solid 5px rgb(19, 30, 182);
     transform: translateY(-5px);
-    border-bottom:  solid 5px rgb(19, 30, 182);
+    border-bottom: solid 5px rgb(19, 30, 182);
 }
-#portfolioCard{
+
+.splitPorto {
+    margin-top: 2rem;
+    height: 8vh;
+    text-align: center;
+    clip-path: polygon(0px 25px,
+            26px 0px,
+            calc(60% - 25px) 0px,
+            60% 25px,
+            100% 25px,
+            100% calc(100% - 10px),
+            calc(100% - 15px) calc(100% - 10px),
+            calc(80% - 10px) calc(100% - 10px),
+            calc(80% - 15px) 100%,
+            80px calc(100% - 0px),
+            65px calc(100% - 15px),
+            0% calc(100% - 15px));
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.splitPorto h3 {
+    color: black !important;
+}
+
+#portfolioCard {
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -227,29 +301,56 @@ width: 100vw;
     gap: 2rem;
     margin-bottom: 1rem;
 }
-.card{
+
+.card {
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
-    background-color:yellow;
+    background-color: yellow;
     width: 300px;
     max-width: 300px;
     padding: 10px;
-    height: 400px;
+    height: 470px;
     border-right: solid 5px rgba(88, 88, 88, 0.495);
     transition: all 0.1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-5px);
-    border-bottom:  solid 5px rgb(88, 88, 88, 0.495);
+    border-bottom: solid 5px rgb(88, 88, 88, 0.495);
 }
-.screenCard{
+
+.card p img {
+    width: 16px;
+    height: 16px;
+}
+
+.card button {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 100% 100%, 100% 100%, 8% 100%, 0 70%);
+    background-color: black;
+    color: yellow;
+    font-size: 24px;
+    padding: 4px;
+    transition: 0.1s ease-in-out;
+}
+
+.card button:hover {
+    transform: translateY(-5px);
+    border-bottom: solid 5px black;
+    cursor: pointer;
+}
+
+.screenCard {
     width: 280px;
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
-    
+
     border: inset 5px rgba(0, 0, 0, 0.539);
 }
-#contact{
+
+#contact {
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
-    background-color:yellow;
+    background-color: yellow;
     color: black;
     text-align: center;
     display: flex;
@@ -260,21 +361,314 @@ width: 100vw;
     border-right: solid 5px rgb(0, 0, 0);
     transition: all 0.1s ease-in-out;
 }
-#contact iframe{
+
+#contact p {
+    padding: 8px;
+}
+
+#contact button {
+    background-color: black;
+    color: yellow;
+    font-size: 24px;
+    padding: 4px;
+    margin: 10px;
+    transition: 0.1s ease-in-out;
+}
+
+#contact button:hover {
+    transform: translateY(-5px);
+    border-bottom: solid 5px black;
+    cursor: pointer;
+}
+
+#contact iframe {
     width: 400px;
     height: 400px;
 
 }
-#contact:hover{
+
+#contact:hover {
     border-right: solid 5px rgb(0, 0, 0);
     transform: translateY(-5px);
-    border-bottom:  solid 5px rgb(0, 0, 0);
-    
+    border-bottom: solid 5px rgb(0, 0, 0);
+
 }
-footer{
+
+footer {
     height: 5vh;
     background-color: black;
 }
+
+
+.flicker {
+    -webkit-animation: flicker-in-1 2s linear both;
+    animation: flicker-in-1 2s linear both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-6-16 1:37:39
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * @animation flicker-in-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes flicker-in-1 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    10.1% {
+        opacity: 1;
+    }
+
+    10.2% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    20.1% {
+        opacity: 1;
+    }
+
+    20.6% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    30.1% {
+        opacity: 1;
+    }
+
+    30.5% {
+        opacity: 1;
+    }
+
+    30.6% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    45.1% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    55.1% {
+        opacity: 0;
+    }
+
+    57% {
+        opacity: 0;
+    }
+
+    57.1% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    60.1% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    65.1% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    75.1% {
+        opacity: 0;
+    }
+
+    77% {
+        opacity: 0;
+    }
+
+    77.1% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    85.1% {
+        opacity: 0;
+    }
+
+    86% {
+        opacity: 0;
+    }
+
+    86.1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flicker-in-1 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    10.1% {
+        opacity: 1;
+    }
+
+    10.2% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    20.1% {
+        opacity: 1;
+    }
+
+    20.6% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    30.1% {
+        opacity: 1;
+    }
+
+    30.5% {
+        opacity: 1;
+    }
+
+    30.6% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    45.1% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    55.1% {
+        opacity: 0;
+    }
+
+    57% {
+        opacity: 0;
+    }
+
+    57.1% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    60.1% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    65.1% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    75.1% {
+        opacity: 0;
+    }
+
+    77% {
+        opacity: 0;
+    }
+
+    77.1% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    85.1% {
+        opacity: 0;
+    }
+
+    86% {
+        opacity: 0;
+    }
+
+    86.1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 
 @media screen and (max-width: 600px) {
@@ -286,9 +680,10 @@ footer{
     #btnList {
         flex-direction: column;
     }
-    #contact iframe{
+
+    #contact iframe {
         width: 200px;
         height: 200px;
-    
-}
+
+    }
 }
