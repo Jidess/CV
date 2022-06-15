@@ -1,6 +1,7 @@
 var gateTab = document.getElementById("gate");
 var devTab = document.getElementById("mainDev");
 var devBtn = document.getElementById("devBtn")
+
 function openDevPage() {
     
     gateTab.style.display = "none";
@@ -9,3 +10,4 @@ function openDevPage() {
 }
 
 devBtn.addEventListener("click", () => { openDevPage();})
+

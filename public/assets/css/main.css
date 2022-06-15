@@ -22,7 +22,10 @@ h5 {
     font-family: 'Orbitron', sans-serif;
 }
 
-
+li img{
+    width: 16px;
+    height: 16px;
+}
 
 
 #gate {
@@ -100,6 +103,22 @@ header h3 {
 nav {
     display: flex;
     justify-content: space-between;
+    background-color: yellow;
+    color: #000;
+    clip-path: polygon(
+  0px 0px,
+  0px 0px,
+  0px 0px,
+  0 0px, 
+  100% 0, 
+  100% 0px,
+  calc(100% - 15px) calc(100% - 10px),
+  calc(80% - 10px) calc(100% - 10px),
+  calc(80% - 15px) 100%,
+  80px calc(100% - 0px),
+  65px calc(100% - 15px),
+  0% calc(100% - 15px));
+  padding: 1rem;
 }
 
 
@@ -135,6 +154,8 @@ main {
 .blueCard{
     transition: all 0.1s ease-in-out;
     border-right: solid 5px rgb(19, 30, 182);
+    width: 300px;
+    height: 475px;
 }
 .blueCard:hover{
     border-right: solid 5px rgb(182, 19, 19);
@@ -145,12 +166,14 @@ main {
 #portfolio {
     clip-path: polygon(67% 0, 100% 2%, 100% 100%, 15% 100%, 0 100%, 0 0);
 width: 100vw;
-    background-color:black;
+    background-color: #000;
     color: black;
     text-align: center;
 }
 
-
+#portfolio h3 {
+    color: white;
+}
 
 #portfolio::before {
     content: "";
@@ -218,7 +241,12 @@ width: 100vw;
     transform: translateY(-5px);
     border-bottom:  solid 5px rgb(88, 88, 88, 0.495);
 }
-
+.screenCard{
+    width: 280px;
+    clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
+    
+    border: inset 5px rgba(0, 0, 0, 0.539);
+}
 #contact{
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
     background-color:yellow;
@@ -258,4 +286,9 @@ footer{
     #btnList {
         flex-direction: column;
     }
+    #contact iframe{
+        width: 200px;
+        height: 200px;
+    
+}
 }
