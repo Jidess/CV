@@ -1,0 +1,16 @@
+#gate{
+    display: flex;
+}
+
+#mainDev {
+    display: none;
+    flex-direction: column;
+  }
+
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
