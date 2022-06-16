@@ -1,23 +1,28 @@
 var gateTab = document.getElementById("gate");
 var devTab = document.getElementById("mainDev");
 var devBtn = document.getElementById("devBtn");
-var Profile = document.getElementById("pic")
-// Create the observer
+var Profile = document.getElementById("pic");
+var wipBtn = document.querySelectorAll('.disabled')
+var hoverBtn = new Audio('public/assets/audio/cursorHover.wav');
+var tabBtn = new Audio('public/assets/audio/cursorClick.wav');
+var dsbBten = new Audio('public/assets/audio/clickDisable.wav');
+var tabOpen = new Audio('public/assets/audio/openTab.wav');
+// Créer  l observer
 const observerCard = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const square = entry.target.querySelectorAll('.card');
 
         if (entry.isIntersecting) {
-        square.forEach(element => {
-            
-        
-            element.classList.add('flicker');
-            
-        });
-            return; // if we added the class, exit the function
+            square.forEach(element => {
+
+
+                element.classList.add('flicker');
+
+            });
+            return; // la classe ajouté, on quite la fonction
         }
 
-        // We're not intersecting, so remove the class!
+        // remove the class
         // square.classList.remove('flicker');
     });
 });
@@ -27,12 +32,12 @@ const observerComp = new IntersectionObserver(entries => {
         const square = entry.target.querySelectorAll('#technoList div');
 
         if (entry.isIntersecting) {
-        square.forEach(element => {
-            
-        
-            element.classList.add('slide');
-            
-        });
+            square.forEach(element => {
+
+
+                element.classList.add('slide');
+
+            });
             return; // if we added the class, exit the function
         }
 
@@ -43,18 +48,28 @@ const observerComp = new IntersectionObserver(entries => {
 
 
 function openDevPage() {
-
+    tabBtn.play();
     gateTab.style.display = "none";
 
     devTab.style.display = "flex";
-    Profile.classList.toggle("flicker")
+    tabOpen.play();
+    Profile.classList.toggle("flicker");
 }
 
 devBtn.addEventListener("click", () => {
     openDevPage();
 })
-// Tell the observer which elements to track
+devBtn.addEventListener("mouseenter", () => {
+    hoverBtn.play()
+})
+wipBtn.forEach(e => {
+
+
+    e.addEventListener("click", (e) => {
+        console.log("test");
+        dsbBten.play();
+    })
+})
+// dire a observer quel element  track
 observerCard.observe(document.querySelector('#portfolioCard'));
 observerComp.observe(document.querySelector('#portfolio'));
-
-
