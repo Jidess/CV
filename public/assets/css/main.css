@@ -205,7 +205,7 @@ main {
     transition: all 0.1s ease-in-out;
     border-right: solid 5px rgb(19, 30, 182);
     width: 300px;
-    height: 475px;
+    height: 400px;
 }
 
 .blueCard:hover {
@@ -363,6 +363,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding: 20px;
     margin-bottom: 4rem;
     border-right: solid 5px rgb(0, 0, 0);
