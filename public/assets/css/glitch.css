@@ -16,14 +16,31 @@
 }
 
 .glitch {
-    width: 400px;
-    height: 400px;
+    width: 50vh;
+    height: 50vh;
     position: relative;
     clip-path: polygon(84% 0, 100% 10%, 100% 100%, 15% 100%, 0 91%, 0 0);
     background-color:yellow;
     transition: 0.1s ease-in-out;
     
 }
+@media screen and (max-width: 768px) {
+    .glitch {
+        width: 40vw;
+        height: 40vh;
+        
+    }
+}
+@media screen and (max-width: 480px) {
+    .glitch {
+        width: 60vw;
+        height: 40vh;
+        
+    }
+}
+    
+
+
 .glitch:hover{
     border-right: solid 5px rgb(182, 19, 19);
     border-bottom:  solid 5px rgb(19, 30, 182);

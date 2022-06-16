@@ -126,6 +126,13 @@ header {
     align-items: center;
     margin-top: 5vh;
 }
+@media screen and (max-width: 349px) {
+    .header {
+       margin-top: 1vh;
+    }
+}
+    
+
 
 header h3 {
 
