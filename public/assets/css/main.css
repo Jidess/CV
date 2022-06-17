@@ -2,6 +2,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
+    background-color: #000;
 }
 
 h1 {
@@ -94,16 +95,20 @@ li img {
     align-items: center;
     background-color: #000;
     color: white;
+    
 
 }
 
-
+#gate div{
+    animation: flicker-in-1 0.5s ease-in-out;
+}
 #btnList {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    
 }
 
 #btnList button {
@@ -456,6 +461,9 @@ main {
 footer {
     height: 5vh;
     background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 8px;
 }
 
 

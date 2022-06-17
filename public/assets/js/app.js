@@ -2,11 +2,12 @@ var gateTab = document.getElementById("gate");
 var devTab = document.getElementById("mainDev");
 var devBtn = document.getElementById("devBtn");
 var Profile = document.getElementById("pic");
-var wipBtn = document.querySelectorAll('.disabled')
+var wipBtn = document.querySelectorAll('.btnWip')
 var hoverBtn = new Audio('public/assets/audio/cursorHover.wav');
 var tabBtn = new Audio('public/assets/audio/cursorClick.wav');
 var dsbBten = new Audio('public/assets/audio/clickDisable.wav');
 var tabOpen = new Audio('public/assets/audio/openTab.wav');
+var flicker = new Audio('public/assets/audio/flicker.wav')
 // Créer  l observer
 const observerCard = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -19,6 +20,7 @@ const observerCard = new IntersectionObserver(entries => {
                 element.classList.add('flicker');
 
             });
+            flicker.play()
             return; // la classe ajouté, on quite la fonction
         }
 
