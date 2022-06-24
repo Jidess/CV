@@ -3,11 +3,11 @@ var devTab = document.getElementById("mainDev");
 var devBtn = document.getElementById("devBtn");
 var Profile = document.getElementById("pic");
 var wipBtn = document.querySelectorAll('.btnWip')
-var hoverBtn = new Audio('public/assets/audio/cursorHover.wav');
-var tabBtn = new Audio('public/assets/audio/cursorClick.wav');
-var dsbBten = new Audio('public/assets/audio/clickDisable.wav');
-var tabOpen = new Audio('public/assets/audio/openTab.wav');
-var flicker = new Audio('public/assets/audio/flicker.wav')
+// var hoverBtn = new Audio('public/assets/audio/cursorHover.wav');
+// var tabBtn = new Audio('public/assets/audio/cursorClick.wav');
+// var dsbBten = new Audio('public/assets/audio/clickDisable.wav');
+// var tabOpen = new Audio('public/assets/audio/openTab.wav');
+// var flicker = new Audio('public/assets/audio/flicker.wav')
 // Créer  l observer
 const observerCard = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -20,7 +20,7 @@ const observerCard = new IntersectionObserver(entries => {
                 element.classList.add('flicker');
 
             });
-            flicker.play()
+            // flicker.play()
             return; // la classe ajouté, on quite la fonction
         }
 
@@ -50,28 +50,28 @@ const observerComp = new IntersectionObserver(entries => {
 
 
 function openDevPage() {
-    tabBtn.play();
+    // tabBtn.play();
     gateTab.style.display = "none";
 
     devTab.style.display = "flex";
-    tabOpen.play();
+    // tabOpen.play();
     Profile.classList.toggle("flicker");
 }
 
 devBtn.addEventListener("click", () => {
     openDevPage();
 })
-devBtn.addEventListener("mouseenter", () => {
-    hoverBtn.play()
-})
-wipBtn.forEach(e => {
+// devBtn.addEventListener("mouseenter", () => {
+//     hoverBtn.play()
+// })
+// wipBtn.forEach(e => {
 
 
-    e.addEventListener("click", (e) => {
-        console.log("test");
-        dsbBten.play();
-    })
-})
+//     e.addEventListener("click", (e) => {
+//         console.log("test");
+//         dsbBten.play();
+//     })
+// })
 // dire a observer quel element  track
 observerCard.observe(document.querySelector('#portfolioCard'));
 observerComp.observe(document.querySelector('#portfolio'));
